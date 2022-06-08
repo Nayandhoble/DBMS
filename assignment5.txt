@@ -1,0 +1,58 @@
+Q1.
+
+CREATE TABLE semp (
+epno CHAR(4),
+epname CHAR(20),
+basic FLOAT,
+deptno CHAR(2),
+depthead CHAR(4)
+);
+O/p
+ Column | Type | Collation | Nullable | Default
+----------+------------------+-----------+----------+---------
+ epno | character(4) | | |
+ epname | character(20) | | |
+ basic | double precision | | |
+ deptno | character(2) | | |
+ depthead | character(4) | | |
+
+
+Q2.
+
+
+ CREATE TABLE sdept (
+deptno CHAR(2),
+deptname CHAR(15)
+);
+O/p
+ Column | Type | Collation | Nullable | Default
+----------+---------------+-----------+----------+---------
+ deptno | character(2) | | |
+ deptname | character(15) | | |
+
+
+Q3.
+
+
+ insert into sdept(deptno,deptname) 
+values(10, 'Development'),(20, 'Training');
+ deptno | deptname
+--------+-----------------
+ 10 | Development
+ 20 | Training
+(2 rows)
+
+Q4. 
+
+insert into semp(epno,epname,basic,deptno,depthead)
+values 
+(0001,'nayan',6000,10,null),(0002,'nikhil',8000,20,null),(0003,'mayur',4000,10,0001),(0004,'palash',6000,n
+ull,0020);
+Assignment 5=# select * from semp;
+ epno | epname | basic | deptno | depthead
+------+----------------------+-------+--------+----------
+ 1 | nayan | 6000 | 10 |
+ 2 | nikhil | 8000 | 20 |
+ 3 | mayur | 4000 | 10 | 1
+ 4 | palash | 6000 | | 2
+(4 rows)
